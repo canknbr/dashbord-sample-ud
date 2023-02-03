@@ -93,12 +93,14 @@ main h1 {
 }
 main .main-wrapper {
   display: flex;
+  align-items: flex-start;
   gap: 62px;
 }
 .main-left-wrapper {
   display: flex;
   flex-direction: column;
   gap: 72px;
+  flex: 1;
 }
 .main-left-wrapper h2 {
   font-size: 1.2rem;
@@ -112,11 +114,55 @@ main .main-wrapper {
   color: var(--darkest-blue);
   margin-bottom: 32px;
 }
+.main-left-wrapper .table {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.table .row {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin-left: -1rem;
+  color: var(--darkest-blue);
+}
+.table .row.active {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: var(--light-gray);
+}
+.table .row .column {
+  flex: 1;
+}
+.table .row .column h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.table .row .column p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.column button {
+  border: 1px solid var(--dark-blue);
+  background-color: transparent;
+  color: var(--dark-blue);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.section-content a {
+  color: var(--orange);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 .main-right-wrapper {
   background-color: var(--orange);
   padding: 32px;
   color: var(--white);
-  border-radius: 8px;
+  border-radius: 16px;
 }
 .main-right-wrapper-first-paragraph {
   font-size: 1.2rem;
@@ -138,4 +184,26 @@ main .main-wrapper {
   font-weight: 500;
   cursor: pointer;
   margin-top: 16px;
+}
+
+#payment-method .section-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+#payment-method .payment-method-image {
+  border: 1px solid var(--dark-blue);
+  padding: 8px;
+  border-radius: 8px;
+}
+.payment-method-details {
+  flex: 1;
+  margin-left: 16px;
+}
+.payment-method-details + button {
+  border: 1px solid var(--dark-blue);
+  background-color: transparent;
+  color: var(--dark-blue);
+  padding: 8px 16px;
+  border-radius: 8px;
 }
