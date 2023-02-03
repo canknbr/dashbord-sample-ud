@@ -1,0 +1,86 @@
+:root {
+  --light-gray: #f8f8ff;
+  --darkest-blue: #1a194d;
+  --dark-blue: #62618f;
+  --white: #fff;
+  --orange: #ee4d38;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(
+    -45deg,
+    var(--light-gray),
+    var(--dark-blue)
+  );
+  height: 100vh;
+  display: flex;
+
+  font-size: 14px;
+}
+aside {
+  width: 300px;
+  flex-shrink: 0;
+  height: 100%;
+  background-color: var(--light-gray);
+  color: var(--dark-blue);
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.profile-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.profile-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.profile-body h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.profile-body p {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+aside nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+aside nav .item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px 8px 0;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+aside nav .item.active {
+  position: relative;
+}
+aside nav .item.active::before {
+  content: '';
+  position: absolute;
+  left: -16px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--orange);
+  border-radius: 8px;
+}
+aside nav a:last-child {
+  margin-top: auto;
+}
+main {
+  flex: 1;
+  height: 100%;
+}
