@@ -83,4 +83,59 @@ aside nav a:last-child {
 main {
   flex: 1;
   height: 100%;
+  padding: 64px 48px;
+}
+main h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--darkest-blue);
+  margin-bottom: 16px;
+}
+main .main-wrapper {
+  display: flex;
+  gap: 62px;
+}
+.main-left-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+.main-left-wrapper h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--darkest-blue);
+  margin-bottom: 8px;
+}
+.main-left-wrapper .section-description {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--darkest-blue);
+  margin-bottom: 32px;
+}
+.main-right-wrapper {
+  background-color: var(--orange);
+  padding: 32px;
+  color: var(--white);
+  border-radius: 8px;
+}
+.main-right-wrapper-first-paragraph {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.main-right-wrapper h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.main-right-wrapper button {
+  border: 1px solid var(--white);
+  background-color: transparent;
+  color: var(--white);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 16px;
 }
